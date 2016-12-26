@@ -7,8 +7,10 @@
   <%%= f.button :wrapped, :cancel => <%= controller_routing_path %>_path %>
   <%- else -%>
 
-  <%%= f.button :submit, :class => 'btn-primary' %>
-  <%%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                <%= controller_routing_path %>_path, :class => 'btn btn-default' %>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <%%= f.button :submit, :class => 'btn-primary' %>
+    </div>
+  </div>
   <%- end -%>
 <%% end %>
